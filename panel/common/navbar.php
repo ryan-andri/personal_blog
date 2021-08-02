@@ -37,7 +37,7 @@
             </div>
             <div class="sb-sidenav-footer">
                 <div class="small">Logged in as:</div>
-                Start Bootstrap
+                <strong><?= $_SESSION['admin_loged']; ?></strong>
             </div>
         </nav>
     </div>

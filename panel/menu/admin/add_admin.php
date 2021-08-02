@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../../../config/db.php');
+require_once(BASE_PATH . '/panel/common/auth.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $input = filter_input_array(INPUT_POST);

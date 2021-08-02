@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once('../config/db.php');
+require_once('common/auth.php');
 include_once('common/header.php');
 include_once('common/navbar.php');
 ?>
