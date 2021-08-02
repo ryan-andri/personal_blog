@@ -24,11 +24,15 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link" href="<?= BASE_URL ?>/panel">
+                    <a class="nav-link <?= (CURRENT_PAGE == "panel") ? "active" : "" ?>" href="<?= BASE_URL ?>/panel">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
+                    <a class="nav-link <?= (CURRENT_PAGE == "admin.php") ? "active" : "" ?>" href="<?= BASE_URL ?>/panel/menu/admin/admin.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                        Admin
+                    </a>
                 </div>
             </div>
             <div class="sb-sidenav-footer">
