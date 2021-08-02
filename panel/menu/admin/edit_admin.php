@@ -23,6 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
+    $db->where("username", filter_input(INPUT_POST, 'username'));
+    $data = $db->getOne("admin");
+    if ($db->count > 0 && ($_SESSION['admin_loged'] != $data['username'] )) {
+        $_SESSION['failed'] = "Username already exist!";
+        header('location:' . BASE_URL . '/panel/menu/admin/admin.php');
+        exit();
+    }
+
     $inpass = filter_input(INPUT_POST, 'new-password');
     $input = array();
     $input['username'] = filter_input(INPUT_POST, 'username');
