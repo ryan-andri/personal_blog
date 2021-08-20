@@ -7,12 +7,7 @@
     <ul class="navbar-nav ms-auto me-3">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">Settings</a></li>
-                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                <li>
-                    <hr class="dropdown-divider" />
-                </li>
+            <ul class="dropdown-menu dropdown-menu-end mt-2" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="<?= BASE_URL ?>/panel/logout.php">Logout</a></li>
             </ul>
         </li>
@@ -29,9 +24,13 @@
                         Dashboard
                     </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
-                    <a class="nav-link <?= (CURRENT_PAGE == "admin.php") ? "active" : "" ?>" href="<?= BASE_URL ?>/panel/menu/admin/admin.php">
+                    <a class="nav-link <?= (CURRENT_PAGE == "admin.php") ? "active" : "" ?>" href="<?= BASE_URL ?>/panel/menu/admin.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
                         Admin
+                    </a>
+                    <a class="nav-link <?= (CURRENT_PAGE == "blog.php") ? "active" : "" ?>" href="<?= BASE_URL ?>/panel/menu/blog.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-blog"></i></div>
+                        Blog
                     </a>
                 </div>
             </div>
